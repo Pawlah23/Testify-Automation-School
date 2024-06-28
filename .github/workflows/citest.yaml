@@ -1,9 +1,9 @@
 
 name: Github Actions Demo
-on: [ push ]
+on: [ push, pull-request ]
 jobs:
    Test:
-   runs-on: windows-latest
+   runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
         - run: echo " The job was automatically triggered by a ${{ github.event_name }} event."
