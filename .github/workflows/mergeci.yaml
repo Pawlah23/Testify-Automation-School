@@ -1,6 +1,6 @@
 
 name: Merge CI
-on: [ pull-request ]
+on: [ pull_request ]
 jobs:
    Test:
     runs-on: ${{ matrix.os }}
@@ -8,8 +8,8 @@ jobs:
       matrix:
         os: [ macos-latest, windows-latest, ubuntu-latest ]
     steps:
-      uses: actions/checkout@v2
-      run: python main.py
+      - uses: actions/checkout@v2
+      - run: python main.py
         
         
        
